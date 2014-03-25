@@ -1,0 +1,61 @@
+An example project to display what appears to be an issue with m2e and/or antlr4-maven-plugin
+
+http://stackoverflow.com/questions/22613293/inconsistent-token-handling-in-antlr4
+
+
+On the CLI:
+
+	antlr4-22613293/ on master                                                                                                                                                                               
+	> mvn clean compile
+	[INFO] Scanning for projects...
+	[INFO]                                                                         
+	[INFO] ------------------------------------------------------------------------
+	[INFO] Building antlr4-22613293 0.0.1-SNAPSHOT
+	[INFO] ------------------------------------------------------------------------
+	[INFO] 
+	[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ antlr4-22613293 ---
+	[INFO] Deleting /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/target
+	[INFO] 
+	[INFO] --- antlr4-maven-plugin:4.2:antlr4 (antlr) @ antlr4-22613293 ---
+	[INFO] ANTLR 4: Processing source directory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/antlr4
+	[INFO] Processing grammar: L.g4
+	[INFO] Processing grammar: P.g4
+	[INFO] 
+	[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ antlr4-22613293 ---
+	[INFO] Using 'UTF-8' encoding to copy filtered resources.
+	[INFO] skip non existing resourceDirectory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/resources
+	[INFO] 
+	[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ antlr4-22613293 ---
+	[INFO] Compiling 4 source files to /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/target/classes
+	[INFO] ------------------------------------------------------------------------
+	[INFO] BUILD SUCCESS
+	[INFO] ------------------------------------------------------------------------
+	[INFO] Total time: 2.007s
+	[INFO] Finished at: Tue Mar 25 10:24:27 SAST 2014
+	[INFO] Final Memory: 16M/310M
+	[INFO] ------------------------------------------------------------------------
+	antlr4-22613293/ on master
+
+In Eclipse:
+
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Update started
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.example:antlr4-22613293:0.0.1-SNAPSHOT @ /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/pom.xml.
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] ANTLR 4: Processing source directory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/antlr4
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Adding source folder /antlr4-22613293/src/main/java
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Adding source folder /antlr4-22613293/target/generated-sources/antlr4
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Adding source folder /antlr4-22613293/src/test/java
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Update completed: 0 sec
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] ANTLR 4: Processing source directory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/antlr4
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Processing grammar: L.g4
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Processing grammar: P.g4
+	3/25/14, 10:25:25 AM GMT+02:00: [ERROR] error(126): P.g4:7:8: cannot create implicit token for string literal in non-combined grammar: '«'
+	3/25/14, 10:25:25 AM GMT+02:00: [ERROR] error(126): P.g4:7:15: cannot create implicit token for string literal in non-combined grammar: '»'
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Using 'UTF-8' encoding to copy filtered resources.
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] skip non existing resourceDirectory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/resources
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] Using 'UTF-8' encoding to copy filtered resources.
+	3/25/14, 10:25:25 AM GMT+02:00: [INFO] skip non existing resourceDirectory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/test/resources
+	3/25/14, 10:25:26 AM GMT+02:00: [INFO] ANTLR 4: Processing source directory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/antlr4
+	3/25/14, 10:25:26 AM GMT+02:00: [INFO] Using 'UTF-8' encoding to copy filtered resources.
+	3/25/14, 10:25:26 AM GMT+02:00: [INFO] skip non existing resourceDirectory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/main/resources
+	3/25/14, 10:25:26 AM GMT+02:00: [INFO] Using 'UTF-8' encoding to copy filtered resources.
+	3/25/14, 10:25:26 AM GMT+02:00: [INFO] skip non existing resourceDirectory /Users/ptomli/Documents/Projects/ptomli/antlr4-22613293/src/test/resources
